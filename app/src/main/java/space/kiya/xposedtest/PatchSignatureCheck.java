@@ -11,7 +11,7 @@ public class PatchSignatureCheck implements IXposedHookZygoteInit{
     @Override public void initZygote(StartupParam startupParam) throws Throwable {
         XposedHelpers.findAndHookMethod("java.security.Signature", null, "verify", byte[].class, new XC_MethodHook() {
             @Override protected void afterHookedMethod(MethodHookParam param) throws Throwable {
-                XposedBridge.log("disabled verify signature.");
+                XposedBridge.log("disabled system verify signature.");
                 param.setResult(Boolean.TRUE);
             }
         });
