@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="space.kiya.xposedtest">
+          package="space.kiya.xposedtools">
 
     <application android:allowBackup="true"
                  android:label="@string/app_name"
@@ -11,7 +11,7 @@
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="kiya's test module" />
+            android:value="kiya's TOOLs BOX" />
         <meta-data
             android:name="xposedminversion"
             android:value="54" />

@@ -1,4 +1,4 @@
-package space.kiya.xposedtest;
+package space.kiya.xposedtools;
 import android.widget.EditText;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;

@@ -1,4 +1,4 @@
-package space.kiya.xposedtest;
+package space.kiya.xposedtools;
 import de.robv.android.xposed.IXposedHookZygoteInit;
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;

@@ -1,4 +1,4 @@
-package space.kiya.xposedtest;
+package space.kiya.xposedtools;
 import android.graphics.Color;
 import android.widget.TextView;
 
