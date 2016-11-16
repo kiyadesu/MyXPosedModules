@@ -1,5 +1,6 @@
 package space.kiya.xposedtools;
 import android.content.Context;
+
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;
@@ -24,17 +25,18 @@ public class LogRRDictParams implements IXposedHookLoadPackage {
 
                             XposedBridge.log("get 360 loader");
                             Context context = (Context) param.args[0];
-                            ClassLoader classLoader = context.getClassLoader();
+                            final ClassLoader classLoader = context.getClassLoader();
 
                             XposedHelpers.findAndHookMethod("org.kymjs.kjframe.utils.CipherUtils", classLoader, "md5", String.class , new XC_MethodHook() {
 
                                 @Override protected void afterHookedMethod(MethodHookParam param) throws Throwable {
                                     XposedBridge.log("paramString:" + param.args[0]);
                                     XposedBridge.log("MD5result:" + param.getResult().toString());
+
                                 }
 
-
                             });
+
                     }
             });
         }
